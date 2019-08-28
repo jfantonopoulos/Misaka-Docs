@@ -1,0 +1,711 @@
+﻿{
+  "Modules": [
+    {
+      "Name": "Help Module",
+      "Description": "This module contains commands to assist the user in utilizing the bot.",
+      "GlyphIcon": "glyphicon-heart",
+      "Commands": [
+        {
+          "Name": "help",
+          "Description": "Lists all the modules and their commands.",
+          "Arguments": []
+        },
+        {
+          "Name": "syntax",
+          "Description": "Shows the syntax for the specified command.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "command name"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Prefix Module",
+      "Description": "This module allows users to set custom prefixes for their servers.",
+      "GlyphIcon": "glyphicon-paperclip",
+      "Commands": [
+        {
+          "Name": "addprefix",
+          "Description": "Adds the specified prefix to the guild if it doesn't already exist.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "prefix"
+            }
+          ]
+        },
+        {
+          "Name": "removeprefix",
+          "Description": "Removes the specified prefix from the guild if it exists.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "prefix"
+            }
+          ]
+        },
+        {
+          "Name": "clearprefixes",
+          "Description": "Removes all the prefixes from the guild, other than the default. Restricted to administrators.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "prefix"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Subscriptions Module",
+      "Description": "This module allows users to configure services such as the Reddit service, so that it will post to their channel.",
+      "GlyphIcon": "glyphicon-briefcase",
+      "Commands": [
+        {
+          "Name": "cnnsubscribe",
+          "Description": "Subscribes the current channel to breaking news from CNN.",
+          "Arguments": [ ]
+        },
+        {
+          "Name": "cnnunsubscribe",
+          "Description": "Unsubscribes the current channel from breaking news from CNN.",
+          "Arguments": [ ]
+        },
+        {
+          "Name": "redditsubscribe",
+          "Description": "Subscribes the current channel to the specified subreddit, and allows you to set the check interval. (minutes)",
+          "Arguments": [
+            {
+              "Type": "int",
+              "Name": "interval"
+            },
+            {
+              "Type": "string",
+              "Name": "subreddit name"
+            }
+          ]
+        },
+        {
+          "Name": "redditunsubscribe",
+          "Description": "Unsubscribes the current channel from the specified subreddit.",
+          "Arguments": [ 
+            {
+              "Type": "string",
+              "Name": "subreddit name"
+            }
+          ]
+        },
+        {
+          "Name": "subscriptions",
+          "Description": "Displays all of the services the current channel is subscribed to.",
+          "Arguments": []
+        },
+      ]
+    },
+    {
+      "Name": "Stats Module",
+      "Description": "This module contains commands that display process information, along with other statistics.",
+      "GlyphIcon": "glyphicon-equalizer",
+      "Commands": [
+        {
+          "Name": "invite",
+          "Description": "Displays an invite for this bot.",
+          "Arguments": []
+        },
+        {
+          "Name": "uptime",
+          "Description": "Displays how long the bot has been running.",
+          "Arguments": []
+        },
+        {
+          "Name": "ping",
+          "Description": "Displays the latency between the bot and the Discord servers.",
+          "Arguments": []
+        },
+        {
+          "Name": "stats",
+          "Description": "Displays various statistics such as CPU, RAM, and HDD usage.",
+          "Arguments": []
+        },
+        {
+          "Name": "speedtest",
+          "Description": "Runs a fairly reliable speedtest.",
+          "Arguments": []
+        }
+      ]
+    },
+    {
+      "Name": "Tags Module",
+      "Description": "This module contains the commands necessary to add/view/remove tags. Tags are channel specific.",
+      "GlyphIcon": "glyphicon-tag",
+      "Commands": [
+        {
+          "Name": "maketag",
+          "Description": "Creates a tag with the specified name and content.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "name"
+            },
+            {
+              "Type": "string",
+              "Name": "content"
+            }
+          ]
+        },
+        {
+          "Name": "tag",
+          "Description": "Displays the specified tag if it exists.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "name"
+            }
+          ]
+        },
+        {
+          "Name": "tags",
+          "Description": "Displays all the tags on the current channel.",
+          "Arguments": []
+        },
+        {
+          "Name": "deletetag",
+          "Description": "Removes the specified tag from the channel.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "name"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Voice Module",
+      "Description": "This module contains various audio playback commands as well as commands for joining and leaving voice channels.",
+      "GlyphIcon": "glyphicon-bullhorn",
+      "Commands": [
+        {
+          "Name": "joinvoice",
+          "Description": "Joins the specified voice channel within the current guild, if one isn't specified it'll join the default.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "channel name"
+            }
+          ]
+        },
+        {
+          "Name": "leavevoice",
+          "Description": "Disconnects from the current voice channel within the current guild if in one.",
+          "Arguments": []
+        },
+        {
+          "Name": "stopsound",
+          "Description": "Stops the bot from streaming audio within the current guild, and advances the queue.",
+          "Arguments": []
+        },
+        {
+          "Name": "skip",
+          "Description": "Skips the the current audio and advances the queue.",
+          "Arguments": []
+        },
+        {
+          "Name": "myinstant",
+          "Description": "Allows you to search MyInstants and play a random clip through the bot's voice connection.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "query"
+            }
+          ]
+        },
+        {
+          "Name": "playurl",
+          "Description": "Attempts to download and play the specified url.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "url"
+            }
+          ]
+        },
+        {
+          "Name": "playsc",
+          "Description": "Attempts to download and play the specified SoundCloud song.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "soundcloud url"
+            }
+          ]
+        },
+        {
+          "Name": "playyt",
+          "Description": "Attempts to download and play the specified YouTube video, if a playlist is supplied it will queue a few following songs.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "video/playlist url"
+            }
+          ]
+        },
+        {
+          "Name": "tts",
+          "Description": "Downloads TTS over an external API and plays it through the bot's audio connection.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "text"
+            }
+          ]
+        },
+        {
+          "Name": "record",
+          "Description": "Records the specified user for the desired amount of time and plays it back.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username"
+            },
+            {
+              "Type": "int",
+              "Name": "timespan"
+            }
+          ]
+        },
+        {
+          "Name": "queue",
+          "Description": "Displays the first few audio items that are queued.",
+          "Arguments": []
+        }
+      ]
+    },
+    {
+      "Name": "Admin Module",
+      "Description": "This module contains several general administration commands, along with some owner-restricted commands.",
+      "GlyphIcon": "glyphicon-user",
+      "Commands": [
+        {
+          "Name": "kick",
+          "Description": "Displays the first few audio items that are queued.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username"
+            }
+          ]
+        },
+        {
+          "Name": "ban",
+          "Description": "If permissions allow, the specified user will be banned from the guild.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username"
+            }
+          ]
+        },
+        {
+          "Name": "unban",
+          "Description": "Unbans the specified user if they're banned and permissions allow so.",
+          "Arguments": [
+            {
+              "Type": "int",
+              "Name": "user ID"
+            }
+          ]
+        },
+        {
+          "Name": "addrole",
+          "Description": "Adds the specified role to the player if they're not ranked higher and permissions allow.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "role"
+            },
+            {
+              "Type": "string",
+              "Name": "username"
+            }
+          ]
+        },
+        {
+          "Name": "removeroll",
+          "Description": "Removes the specified role from the user if they're not ranked higher and permissions allow.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "role"
+            },
+            {
+              "Type": "string",
+              "Name": "username"
+            }
+          ]
+        },
+        {
+          "Name": "purgemessages",
+          "Description": "Purges the specified number of messages from the current channel if permissions allow.",
+          "Arguments": [
+            {
+              "Type": "int",
+              "Name": "messages"
+            }
+          ]
+        },
+        {
+          "Name": "reloadscripts",
+          "Description": "Hotload External Scripts - 🚫 Restricted to Jeezy",
+          "Arguments": []
+        },
+        {
+          "Name": "loadmodule",
+          "Description": "Loades an unloaded Module - 🚫 Restricted to Jeezy.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "module name"
+            }
+          ]
+        },
+        {
+          "Name": "unloadmodule",
+          "Description": "Unloads a previously loaded Module. 🚫 Retricted to Jeezy.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "module name"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Mashape Module",
+      "Description": "This module contains commands that utilize the various Mashape APIs.",
+      "GlyphIcon": "glyphicon-console",
+      "Commands": [
+        {
+          "Name": "yodaspeak",
+          "Description": "Translates your text to yoda speak, it doesn't work very well.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "text"
+            }
+          ]
+        },
+        {
+          "Name": "urbandefine",
+          "Description": "Searches UrbanDictionary for your specified query, and then grabs a random result.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "term"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Data Module",
+      "Description": "This module contains commands that retrieve data either externally or from the database.",
+      "GlyphIcon": "glyphicon-list-alt",
+      "Commands": [
+        {
+          "Name": "guildinfo",
+          "Description": "Retrieves some brief information about the current guild.",
+          "Arguments": []
+        },
+        {
+          "Name": "weather",
+          "Description": "Gets the weather forecast for the specified area.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "state"
+            },
+            {
+              "Type": "string",
+              "Name": "city"
+            }
+          ]
+        },
+        {
+          "Name": "statustime",
+          "Description": "Calculates the time the user has been their current status.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username"
+            }
+          ]
+        },
+        {
+          "Name": "userreactions",
+          "Description": "Gets the top few reactions the specified player has received the most of.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username"
+            }
+          ]
+        },
+        {
+          "Name": "usergametime",
+          "Description": "Gets the top few games the user plays the most.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username"
+            }
+          ]
+        },
+        {
+          "Name": "topgametime",
+          "Description": "Gets the user's with he highest playtime for the specified game, including the total gametime altogether.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "game name"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Image Module",
+      "Description": "This module contains commands that can retrieve and send images.",
+      "GlyphIcon": "glyphicon-picture",
+      "Commands": [
+        {
+          "Name": "randomdog",
+          "Description": "Retrieves a random dog from some random API.",
+          "Arguments": []
+        },
+        {
+          "Name": "imagesearch",
+          "Description": "Searches Google Images for your specified query and returns a random result.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "query"
+            }
+          ]
+        },
+        {
+          "Name": "webshot",
+          "Description": "Takes a screenshot of the specified url and sends it to chat.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "url"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Reminder Module",
+      "Description": "This module contains commands for managing and creating reminders. Reminders are channel specific.",
+      "GlyphIcon": "glyphicon-time",
+      "Commands": [
+        {
+          "Name": "remind",
+          "Description": "Creates a reminder for the current channel that triggers after the desired interval. Example TimeSpan 00:05:00 = 5 minutes.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "name"
+            },
+            {
+              "Type": "timespan",
+              "Name": "interval"
+            },
+            {
+              "Type": "string",
+              "Name": "message"
+            }
+          ]
+        },
+        {
+          "Name": "cancelreminder",
+          "Description": "Cancels the specified reminder if you own it.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "name"
+            }
+          ]
+        },
+        {
+          "Name": "clearreminders",
+          "Description": "Clears all of the reminders from the current channel unless one lacks permissions.",
+          "Arguments": []
+        }
+      ]
+    },
+    {
+      "Name": "Salutation Module",
+      "Description": "This module contains commands for managing a guild's salutations, such as welcome messages.",
+      "GlyphIcon": "glyphicon-thumbs-up",
+      "Commands": [
+        {
+          "Name": "addwelcomemessage",
+          "Description": "Adds a welcome message to the current guild if one does not already exist.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "message"
+            }
+          ]
+        },
+        {
+          "Name": "removewelcomemessage",
+          "Description": "Removes the welcome message from this service if one exists.",
+          "Arguments": []
+        },
+        {
+          "Name": "addgoodbyemessage",
+          "Description": "Adds a goodbye message to the current guild if one does not already exist.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "message"
+            }
+          ]
+        },
+        {
+          "Name": "removegoodbyemessage",
+          "Description": "Removes goodbye message from the currrent guild if one exists.",
+          "Arguments": []
+        }
+      ]
+    },
+    {
+      "Name": "Magick Module",
+      "Description": "This module contains commands for distorting and/or manipulating existing images. If no image is specified, a previously embedded one will be used.",
+      "GlyphIcon": "glyphicon-wrench",
+      "Commands": [
+        {
+          "Name": "noise",
+          "Description": "Makes a gif out of applying noise to the specified image or a user.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username or url"
+            }
+          ]
+        },
+        {
+          "Name": "charcoal",
+          "Description": "Applies a charcoal type effect to the specified image or a user and returns a gif.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username or url"
+            }
+          ]
+        },
+        {
+          "Name": "idk",
+          "Description": "No description available.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username or url"
+            }
+          ]
+        },
+        {
+          "Name": "implode",
+          "Description": "Implodes the specified image or a user and returns a gif.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username or url"
+            }
+          ]
+        },
+        {
+          "Name": "sharpen",
+          "Description": "Applies swaying sharpen effects to the specified image, and return a gif.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username or url"
+            }
+          ]
+        },
+        {
+          "Name": "contrastfuzz",
+          "Description": "Applies some weird contrast/fuzz effect to the image and makes a gif.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username or url"
+            }
+          ]
+        },
+        {
+          "Name": "happening",
+          "Description": "Places the user's avatar or specified image on the it's happening meme where your image follows the head.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username or url"
+            }
+          ]
+        },
+        {
+          "Name": "oilpaint",
+          "Description": "Applies a oil paint type effect to the specified user's avatar or image, makes a gif.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username or url"
+            }
+          ]
+        },
+        {
+          "Name": "wave",
+          "Description": "Creates waves within the picture and makes a gif.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username or url"
+            }
+          ]
+        },
+        {
+          "Name": "blur",
+          "Description": "Makes a gif by blurring the specified user's avatar or image by varying strengths.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username or url"
+            },
+            {
+              "Type": "int",
+              "Name": "strength"
+            }
+          ]
+        },
+        {
+          "Name": "triggered",
+          "Description": "Applies the user's avatar or the specified image to the triggered meme gif.",
+          "Arguments": [
+            {
+              "Type": "string",
+              "Name": "username or url"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "SiteVisits": 2,
+  "UserLogins": 1,
+  "BugsReported": 1,
+  "FeaturesSuggested": 2,
+  "UsersLoggedIn": [
+    "Jeezy#8149"
+  ],
+  "VisitorAddresses": [
+    "::1",
+    "127.0.0.1"
+  ]
+}
